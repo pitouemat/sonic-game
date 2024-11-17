@@ -1,0 +1,72 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.game-board
+{
+    width: 100vw;
+    height: 500px;
+   
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* faz com que tudo o que esta para fora do limite da tela seja escondido */
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    border-bottom: green 20px solid;
+    
+}
+
+.enemy{
+    position: absolute;
+    bottom: -20px;
+    width: 100px;
+    animation: enemy-moving 1.2s infinite linear ;
+
+}
+.sonic{
+    position: absolute;
+    width: 75px;
+    left: 10px;
+    bottom: 0;
+
+}
+.clouds{
+    position: absolute;
+    width: 500px;
+    animation: clouds 20s infinite linear;
+}
+
+@keyframes clouds {
+    from{
+        right: -450px;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+.jump{
+    animation: jump 0.8s ;
+}
+@keyframes enemy-moving {
+    from{
+        right: -75px;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 130px;
+    }
+    100%{
+        bottom: 0;
+    }
+    
+}
